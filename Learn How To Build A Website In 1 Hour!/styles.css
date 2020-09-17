@@ -35,20 +35,20 @@ body{
     margin-left:1rem;
 }
 
-.main-nav ul{
+.main-nav ul,  .footer-nav ul{
     display:flex;
     margin:0;
     padding:0;
     list-style:none;
 }
 
-.main-nav a {
+.main-nav a, .footer-nav a {
     color:inherit;
     text-decoration: none;
     padding:1rem;
 }
 
-.main-nav a:hover {
+.main-nav a:hover, .footer-nav a:hover  {
     color: rgb(165, 162, 162);
 }
 
@@ -57,12 +57,32 @@ body{
 
     The justify-content property aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally).
    */
-.main-header {
+.main-header, .main-footer {
     display:flex;
     justify-content: space-between;
     align-items:center;
-    height: 140px;
 }
+
+.main-header {
+height: 140px;
+}
+
+.main-footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-footer {
+    height: 70px;
+    background-color: #202027;
+    font-weight:bold;
+}
+
+.social-link {
+    width: 1em;
+    margin-right: .25rem;
+}
+
 
 /* essa container class aplicada no fullbody faz ele ter um tamanho maximo
 o padding serve para quando estiver abaixo dos 1200px os items não baterem na borda da tela*/
@@ -71,6 +91,7 @@ o padding serve para quando estiver abaixo dos 1200px os items não baterem na b
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
+    flex-grow: 1;
 }
 
 .tittle {
@@ -86,6 +107,8 @@ o padding serve para quando estiver abaixo dos 1200px os items não baterem na b
     margin-bottom: 2rem;
 }
 
+
+/*cursor pointer abaixo, faz quando passar o mouse aparecer a mãozinha*/
 .btn {
     color: white;
     background-color:rgb(59, 59, 241);
@@ -93,4 +116,19 @@ o padding serve para quando estiver abaixo dos 1200px os items não baterem na b
     border-radius: 10px;
     text-decoration: none;
     font-size:20px;
+    outline:none;
+    border: none;
+    cursor:pointer;
 }
+
+.btn:hover {
+    background-color: #2180d8;
+}
+
+/*focus serve pra quando se chega no elemento com tab, ele mudar de cor, similar ao hover, mas chegando no elemento com o tab*/
+.btn:focus {
+    background-color: #83bdf3;
+}
+
+
+
